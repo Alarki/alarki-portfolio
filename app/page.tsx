@@ -49,6 +49,11 @@ export default function Home() {
             Software Engineering Graduate | Java • Python • JavaScript • Linux
           </p>
 
+          {/* Availability badge */}
+          <p className="text-center mt-2 text-xs text-green-400">
+            ● Available for Internship / Graduate Programme
+          </p>
+
           <div className="w-16 h-[2px] bg-blue-500 mx-auto mt-6 rounded-full"></div>
 
           {/* ABOUT */}
@@ -78,7 +83,7 @@ export default function Home() {
             </div>
           </section>
 
-          {/* PROJECTS (CLICKABLE) */}
+          {/* PROJECTS */}
           <section className="mt-10">
             <h2 className="text-sm uppercase tracking-widest text-blue-400">
               Projects
@@ -126,14 +131,14 @@ export default function Home() {
             </p>
           </section>
 
-          {/* GITHUB SECTION (NEW) */}
+          {/* GITHUB */}
           <section className="mt-10">
             <h2 className="text-sm uppercase tracking-widest text-blue-400">
               GitHub
             </h2>
 
             <a
-              href="https://github.com/dashboard/"
+              href="https://github.com/Alarki"
               target="_blank"
               className="inline-block mt-3 text-sm text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition"
             >
@@ -141,7 +146,7 @@ export default function Home() {
             </a>
           </section>
 
-          {/* CV DOWNLOAD (NEW) */}
+          {/* CV */}
           <section className="mt-10">
             <h2 className="text-sm uppercase tracking-widest text-blue-400">
               CV
@@ -154,6 +159,26 @@ export default function Home() {
             >
               Download CV
             </a>
+          </section>
+
+          {/* HIRE ME */}
+          <section className="mt-10 text-center">
+
+            <h2 className="text-sm uppercase tracking-widest text-blue-400">
+              Availability
+            </h2>
+
+            <p className="mt-3 text-gray-300 text-sm">
+              Open to Software Development, IT Support, and Graduate Programme opportunities.
+            </p>
+
+            <a
+              href="mailto:ndemugwedhaalarki@gmail.com?subject=Job%20Opportunity%20-%20Software%20Developer"
+              className="inline-block mt-5 bg-blue-600 hover:bg-blue-700 text-white text-sm px-6 py-2 rounded-lg transition shadow-md"
+            >
+              Contact / Hire Me
+            </a>
+
           </section>
 
           {/* CONTACT */}
