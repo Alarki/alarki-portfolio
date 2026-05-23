@@ -23,7 +23,7 @@ export default function Home() {
             <img
               src="/me.jpg"
               alt="Profile"
-              className="w-28 h-28 rounded-full object-cover border border-gray-700"
+              className="w-28 h-28 rounded-full object-cover border border-gray-700 shadow-lg"
             />
           </div>
 
@@ -49,7 +49,7 @@ export default function Home() {
             Software Engineering Graduate | Java • Python • JavaScript • Linux
           </p>
 
-          {/* Availability badge */}
+          {/* Availability Badge */}
           <p className="text-center mt-2 text-xs text-green-400">
             ● Available for Internship / Graduate Programme
           </p>
@@ -61,10 +61,11 @@ export default function Home() {
             <h2 className="text-sm uppercase tracking-widest text-blue-400">
               About
             </h2>
+
             <p className="mt-3 text-gray-300 text-sm leading-relaxed">
               Software Engineering graduate focused on building practical systems,
-              web applications, and IT support solutions using Java, Python, JavaScript,
-              SQL, and Linux environments.
+              web applications, and IT support solutions using Java, Python,
+              JavaScript, SQL, and Linux environments.
             </p>
           </section>
 
@@ -74,12 +75,18 @@ export default function Home() {
               Education
             </h2>
 
-            <div className="mt-4 border border-gray-800 rounded-xl p-4">
+            <div className="mt-4 border border-gray-800 rounded-xl p-4 hover:border-blue-500 transition">
               <h3 className="text-white text-sm font-medium">
                 Diploma in Software Engineering (NQF Level 6)
               </h3>
-              <p className="text-gray-400 text-sm">Botho University</p>
-              <p className="text-gray-500 text-xs">2022 – 2024</p>
+
+              <p className="text-gray-400 text-sm">
+                Botho University
+              </p>
+
+              <p className="text-gray-500 text-xs">
+                2022 – 2024
+              </p>
             </div>
           </section>
 
@@ -94,26 +101,30 @@ export default function Home() {
               <a
                 href="#"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="block border border-gray-800 rounded-xl p-4 hover:border-blue-500 transition hover:bg-gray-900/40"
               >
                 <h3 className="text-white text-sm font-medium">
                   Real Estate Landing Page
                 </h3>
+
                 <p className="text-gray-400 text-sm mt-1">
-                  Responsive UI built with HTML, CSS, JavaScript.
+                  Responsive UI built with HTML, CSS, and JavaScript.
                 </p>
               </a>
 
               <a
                 href="#"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="block border border-gray-800 rounded-xl p-4 hover:border-blue-500 transition hover:bg-gray-900/40"
               >
                 <h3 className="text-white text-sm font-medium">
                   Kids Learning App
                 </h3>
+
                 <p className="text-gray-400 text-sm mt-1">
-                  React Native app focused on UI and learning experience.
+                  React Native application focused on UI and learning experience.
                 </p>
               </a>
 
@@ -140,7 +151,8 @@ export default function Home() {
             <a
               href="https://github.com/Alarki"
               target="_blank"
-              className="inline-block mt-3 text-sm text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+              rel="noopener noreferrer"
+              className="inline-block mt-3 text-sm text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition shadow-md"
             >
               View My GitHub
             </a>
@@ -155,7 +167,7 @@ export default function Home() {
             <a
               href="/cv.pdf"
               download
-              className="inline-block mt-3 text-sm text-white bg-green-600 px-4 py-2 rounded-lg hover:bg-green-700 transition"
+              className="inline-block mt-3 text-sm text-white bg-green-600 px-4 py-2 rounded-lg hover:bg-green-700 transition shadow-md"
             >
               Download CV
             </a>
@@ -173,7 +185,9 @@ export default function Home() {
             </p>
 
             <a
-              href="mailto:ndemugwedhaalarki@gmail.com?subject=Job%20Opportunity%20-%20Software%20Developer"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=ndemugwedhaalarki@gmail.com&su=Job%20Opportunity%20-%20Software%20Developer"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block mt-5 bg-blue-600 hover:bg-blue-700 text-white text-sm px-6 py-2 rounded-lg transition shadow-md"
             >
               Contact / Hire Me
@@ -188,10 +202,20 @@ export default function Home() {
             </h2>
 
             <p className="text-sm text-gray-300 mt-2">
-              Email: <span className="text-white">ndemugwedhaalarki@gmail.com</span>
+              Email:
+              <a
+                href="mailto:ndemugwedhaalarki@gmail.com"
+                className="text-white hover:text-blue-400 ml-1"
+              >
+                ndemugwedhaalarki@gmail.com
+              </a>
             </p>
-            <p className="text-sm text-gray-300">
-              Phone: <span className="text-white">+264812324970</span>
+
+            <p className="text-sm text-gray-300 mt-2">
+              Phone:
+              <span className="text-white ml-1">
+                +264812324970
+              </span>
             </p>
           </section>
 
