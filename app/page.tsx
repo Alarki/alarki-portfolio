@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -15,6 +15,7 @@ export default function Home() {
 
       {/* HEADER / NAVBAR */}
       <header className="relative z-10 flex items-center justify-between w-full max-w-7xl mx-auto mb-6">
+
         {/* LOGO */}
         <div className="flex items-center gap-3">
           <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center font-bold text-xl shadow-lg shadow-red-600/20">
@@ -55,6 +56,7 @@ export default function Home() {
 
         {/* LEFT SIDE */}
         <div className="flex flex-col space-y-6 text-center lg:text-left">
+
           <h3 className="text-2xl md:text-3xl font-medium text-gray-200">
             Hi, I'm <span className="text-white italic font-serif">Alarki</span>
           </h3>
@@ -65,6 +67,7 @@ export default function Home() {
               <span className="text-red-600 block">Junior</span>
               <span className="text-white block">Full-Stack Developer</span>
             </h1>
+
             <p className="text-lg md:text-xl text-gray-400 font-medium mt-3">
               Building Scalable Software Systems
             </p>
@@ -79,54 +82,57 @@ export default function Home() {
           </p>
 
           {/* SOCIALS */}
-<div className="flex flex-col gap-3">
-  <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">
-    Find Me On
-  </span>
+          <div className="flex flex-col gap-3">
 
-  <div className="flex justify-center lg:justify-start gap-4">
+            <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">
+              Find Me On
+            </span>
 
-    {/* LinkedIn */}
-    <a
-      href="https://www.linkedin.com/in/alarki-ndemugwedha-819242376/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="p-3 bg-neutral-900 rounded-xl border border-neutral-800 hover:text-red-600 transition-all"
-    >
-      <FaLinkedin size={22} />
-    </a>
+            <div className="flex justify-center lg:justify-start gap-4">
 
-    {/* GitHub */}
-    <a
-      href="https://github.com/Alarki"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="p-3 bg-neutral-900 rounded-xl border border-neutral-800 hover:text-red-600 transition-all"
-    >
-      <FaGithub size={22} />
-    </a>
+              {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com/in/alarki-ndemugwedha-819242376/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-neutral-900 rounded-xl border border-neutral-800 hover:text-red-600 transition-all"
+              >
+                <FaLinkedin size={22} />
+              </a>
 
-    {/* WhatsApp */}
-    <a
-      href="https://wa.me/264812324970"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="p-3 bg-green-600/20 rounded-xl border border-green-500/40 hover:bg-green-600/30 transition-all"
-    >
-      <span className="text-green-400 font-bold text-sm">WA</span>
-    </a>
+              {/* GitHub */}
+              <a
+                href="https://github.com/Alarki"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-neutral-900 rounded-xl border border-neutral-800 hover:text-red-600 transition-all"
+              >
+                <FaGithub size={22} />
+              </a>
 
-  </div>
-</div>
+              {/* WhatsApp (FIXED ICON) */}
+              <a
+                href="https://wa.me/264812324970"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-green-600/20 rounded-xl border border-green-500/40 hover:bg-green-600/30 transition-all text-green-400"
+              >
+                <FaWhatsapp size={22} />
+              </a>
+
+            </div>
+          </div>
 
           {/* BUTTONS */}
           <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
+
             <Link
               href="/contact"
               className="bg-red-600 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-red-700 transition-all shadow-xl shadow-red-600/10"
             >
               Hire Me
             </Link>
+
             <a
               href="/resume.pdf"
               download
@@ -134,6 +140,7 @@ export default function Home() {
             >
               Resume
             </a>
+
           </div>
         </div>
 
@@ -147,11 +154,13 @@ export default function Home() {
             />
           </div>
         </div>
+
       </section>
 
       {/* FOOTER */}
       <footer className="relative z-10 flex flex-col sm:flex-row justify-between items-center border-t border-neutral-900 pt-4 mt-6 text-xs text-gray-500 w-full max-w-7xl mx-auto gap-4">
         <p>© {new Date().getFullYear()} Alarki Ndemugwedha</p>
+
         <div className="flex items-center gap-2 bg-neutral-900/50 px-4 py-2 rounded-full border border-neutral-800">
           <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
           <span>Available for Opportunities</span>
