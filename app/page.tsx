@@ -67,7 +67,6 @@ export default function Home() {
               <span className="text-red-600 block">Junior</span>
               <span className="text-white block">Full-Stack Developer</span>
             </h1>
-
             <p className="text-lg md:text-xl text-gray-400 font-medium mt-3">
               Building Scalable Software Systems
             </p>
@@ -83,19 +82,18 @@ export default function Home() {
 
           {/* SOCIALS */}
           <div className="flex flex-col gap-3">
-
             <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">
               Find Me On
             </span>
 
-            <div className="flex justify-center lg:justify-start gap-4">
+            <div className="flex justify-center lg:justify-start gap-4 items-center">
 
               {/* LinkedIn */}
               <a
                 href="https://www.linkedin.com/in/alarki-ndemugwedha-819242376/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-neutral-900 rounded-xl border border-neutral-800 hover:text-red-600 transition-all"
+                className="p-3 bg-neutral-900 rounded-xl border border-neutral-800 text-white hover:text-red-600 transition-all"
               >
                 <FaLinkedin size={22} />
               </a>
@@ -105,17 +103,17 @@ export default function Home() {
                 href="https://github.com/Alarki"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-neutral-900 rounded-xl border border-neutral-800 hover:text-red-600 transition-all"
+                className="p-3 bg-neutral-900 rounded-xl border border-neutral-800 text-white hover:text-red-600 transition-all"
               >
                 <FaGithub size={22} />
               </a>
 
-              {/* WhatsApp (FIXED ICON) */}
+              {/* WhatsApp Brand Match Layout */}
               <a
                 href="https://wa.me/264812324970"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-green-600/20 rounded-xl border border-green-500/40 hover:bg-green-600/30 transition-all text-green-400"
+                className="p-3 bg-[#0d2e1a]/30 text-[#10a851] rounded-xl border border-[#10a851]/30 hover:bg-[#10a851] hover:text-white transition-all shadow-md"
               >
                 <FaWhatsapp size={22} />
               </a>
@@ -125,14 +123,12 @@ export default function Home() {
 
           {/* BUTTONS */}
           <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
-
             <Link
               href="/contact"
               className="bg-red-600 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-red-700 transition-all shadow-xl shadow-red-600/10"
             >
               Hire Me
             </Link>
-
             <a
               href="/resume.pdf"
               download
@@ -140,19 +136,29 @@ export default function Home() {
             >
               Resume
             </a>
-
           </div>
+
         </div>
 
         {/* RIGHT SIDE IMAGE */}
         <div className="relative flex justify-center lg:justify-end">
-          <div className="w-[280px] h-[380px] md:w-[350px] md:h-[480px] rounded-[60px] overflow-hidden border-4 border-[#070707] shadow-2xl relative z-10 bg-neutral-900">
+
+          {/* Image frame */}
+          <div className="w-[280px] h-[380px] md:w-[360px] md:h-[490px] rounded-tl-[130px] rounded-br-[130px] rounded-tr-2xl rounded-bl-2xl overflow-hidden border-2 border-red-600/20 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.9)] relative z-10 bg-neutral-900">
+
             <img
               src="/me.jpg"
-              alt="Alarki Profile"
-              className="w-full h-full object-cover object-center hover:scale-105 transition-all duration-700"
+              alt="Alarki - Full-Stack Engineering Asset"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              style={{ objectPosition: "50% 12%" }}
             />
+
           </div>
+
+          {/* Decorative accents */}
+          <div className="absolute -top-3 -right-3 w-20 h-20 border-t-2 border-r-2 border-red-600/30 rounded-tr-3xl pointer-events-none -z-10" />
+          <div className="absolute -bottom-3 -left-3 w-20 h-20 border-b-2 border-l-2 border-red-600/30 rounded-bl-3xl pointer-events-none -z-10" />
+
         </div>
 
       </section>
@@ -160,7 +166,6 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="relative z-10 flex flex-col sm:flex-row justify-between items-center border-t border-neutral-900 pt-4 mt-6 text-xs text-gray-500 w-full max-w-7xl mx-auto gap-4">
         <p>© {new Date().getFullYear()} Alarki Ndemugwedha</p>
-
         <div className="flex items-center gap-2 bg-neutral-900/50 px-4 py-2 rounded-full border border-neutral-800">
           <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
           <span>Available for Opportunities</span>
