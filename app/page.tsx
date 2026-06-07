@@ -79,29 +79,45 @@ export default function Home() {
           </p>
 
           {/* SOCIALS */}
-          <div className="flex flex-col gap-3">
-            <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">
-              Find Me On
-            </span>
-            <div className="flex justify-center lg:justify-start gap-4">
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-neutral-900 rounded-xl border border-neutral-800 hover:text-red-600 transition-all"
-              >
-                <FaLinkedin size={22} />
-              </a>
-              <a
-                href="https://github.com/Alarki"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-neutral-900 rounded-xl border border-neutral-800 hover:text-red-600 transition-all"
-              >
-                <FaGithub size={22} />
-              </a>
-            </div>
-          </div>
+<div className="flex flex-col gap-3">
+  <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">
+    Find Me On
+  </span>
+
+  <div className="flex justify-center lg:justify-start gap-4">
+
+    {/* LinkedIn */}
+    <a
+      href="https://www.linkedin.com/in/alarki-ndemugwedha-819242376/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-3 bg-neutral-900 rounded-xl border border-neutral-800 hover:text-red-600 transition-all"
+    >
+      <FaLinkedin size={22} />
+    </a>
+
+    {/* GitHub */}
+    <a
+      href="https://github.com/Alarki"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-3 bg-neutral-900 rounded-xl border border-neutral-800 hover:text-red-600 transition-all"
+    >
+      <FaGithub size={22} />
+    </a>
+
+    {/* WhatsApp */}
+    <a
+      href="https://wa.me/264812324970"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-3 bg-green-600/20 rounded-xl border border-green-500/40 hover:bg-green-600/30 transition-all"
+    >
+      <span className="text-green-400 font-bold text-sm">WA</span>
+    </a>
+
+  </div>
+</div>
 
           {/* BUTTONS */}
           <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
