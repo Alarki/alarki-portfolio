@@ -1,226 +1,147 @@
 "use client";
 
-import { Typewriter } from "react-simple-typewriter";
+import Link from "next/link";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <main
-      className="min-h-screen flex justify-center p-6 relative"
-      style={{
-        backgroundImage: "url('/bg.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/70"></div>
+    <main className="min-h-screen bg-[#070707] text-white relative flex flex-col justify-between p-6 md:p-12">
 
-      <div className="relative z-10 w-full max-w-3xl">
-        <div className="bg-[#0f172a]/90 backdrop-blur-md border border-gray-800 rounded-2xl p-10 text-gray-200 shadow-2xl">
+      {/* DECORATIVE BACKGROUND ELEMENTS */}
+      <div className="absolute top-[20%] right-[-5%] w-[350px] h-[350px] md:w-[550px] md:h-[550px] bg-red-600 rounded-full -z-10 opacity-90 md:opacity-100" />
+      <div className="absolute top-[10%] right-[20%] w-20 h-20 bg-red-950/80 rounded-full -z-10 hidden lg:block" />
+      <div className="absolute bottom-[-5%] left-[-5%] w-48 h-48 bg-red-900/20 rounded-full -z-10" />
+      <div className="absolute inset-0 bg-red-600/5 blur-[40px] pointer-events-none -z-20" />
 
-          {/* Profile */}
-          <div className="flex justify-center">
-            <img
-              src="/me.jpg"
-              alt="Profile"
-              className="w-28 h-28 rounded-full object-cover border border-gray-700 shadow-lg"
-            />
+      {/* HEADER / NAVBAR */}
+      <header className="relative z-10 flex items-center justify-between w-full max-w-7xl mx-auto mb-6">
+        {/* LOGO */}
+        <div className="flex items-center gap-3">
+          <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center font-bold text-xl shadow-lg shadow-red-600/20">
+            A
+          </div>
+          <span className="text-2xl font-black tracking-tighter hidden sm:block">
+            Alarki
+          </span>
+        </div>
+
+        {/* NAVIGATION */}
+        <nav className="flex items-center gap-5 md:gap-10 text-sm font-semibold">
+          <Link href="/" className="text-white border-b-2 border-red-600 pb-1">
+            Home
+          </Link>
+          <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
+            About
+          </Link>
+          <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
+            Services
+          </Link>
+          <Link href="/projects" className="text-gray-400 hover:text-white transition-colors">
+            Projects
+          </Link>
+        </nav>
+
+        {/* CONTACT BUTTON */}
+        <Link
+          href="/contact"
+          className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full text-sm font-bold transition-all shadow-md shadow-red-600/20"
+        >
+          Contact
+        </Link>
+      </header>
+
+      {/* HERO SECTION */}
+      <section className="relative z-10 flex-grow grid grid-cols-1 lg:grid-cols-2 gap-8 items-center w-full max-w-7xl mx-auto py-6">
+
+        {/* LEFT SIDE */}
+        <div className="flex flex-col space-y-6 text-center lg:text-left">
+          <h3 className="text-2xl md:text-3xl font-medium text-gray-200">
+            Hi, I'm <span className="text-white italic font-serif">Alarki</span>
+          </h3>
+
+          {/* MAIN TITLE */}
+          <div>
+            <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tighter">
+              <span className="text-red-600 block">Junior</span>
+              <span className="text-white block">Full-Stack Developer</span>
+            </h1>
+            <p className="text-lg md:text-xl text-gray-400 font-medium mt-3">
+              Building Scalable Software Systems
+            </p>
           </div>
 
-          {/* Name */}
-          <h1 className="text-center mt-6 text-3xl font-semibold text-white">
-            <Typewriter
-              words={[
-                "Alarki Ndemugwedha",
-                "Software Engineer",
-                "IT & Systems Enthusiast"
-              ]}
-              loop={0}
-              cursor
-              cursorStyle="|"
-              typeSpeed={60}
-              deleteSpeed={40}
-              delaySpeed={1400}
-            />
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-center mt-3 text-gray-400 text-sm">
-            Software Engineering Graduate | Java • Python • JavaScript • Linux
+          {/* DESCRIPTION */}
+          <p className="text-gray-400 max-w-lg mx-auto lg:mx-0 text-base md:text-lg leading-relaxed">
+            I build backend systems, APIs, and full-stack applications using
+            FastAPI, Python, React, and PostgreSQL. I enjoy creating practical
+            software solutions that solve real-world problems and improve user
+            experiences.
           </p>
 
-          {/* Availability Badge */}
-          <p className="text-center mt-2 text-xs text-green-400">
-            ● Available for Internship / Graduate Programme
-          </p>
-
-          <div className="w-16 h-[2px] bg-blue-500 mx-auto mt-6 rounded-full"></div>
-
-          {/* ABOUT */}
-          <section className="mt-10">
-            <h2 className="text-sm uppercase tracking-widest text-blue-400">
-              About
-            </h2>
-
-            <p className="mt-3 text-gray-300 text-sm leading-relaxed">
-              Software Engineering graduate focused on building practical systems,
-              web applications, and IT support solutions using Java, Python,
-              JavaScript, SQL, and Linux environments.
-            </p>
-          </section>
-
-          {/* EDUCATION */}
-          <section className="mt-10">
-            <h2 className="text-sm uppercase tracking-widest text-blue-400">
-              Education
-            </h2>
-
-            <div className="mt-4 border border-gray-800 rounded-xl p-4 hover:border-blue-500 transition">
-              <h3 className="text-white text-sm font-medium">
-                Diploma in Software Engineering (NQF Level 6)
-              </h3>
-
-              <p className="text-gray-400 text-sm">
-                Botho University
-              </p>
-
-              <p className="text-gray-500 text-xs">
-                2022 – 2024
-              </p>
-            </div>
-          </section>
-
-          {/* PROJECTS */}
-          <section className="mt-10">
-            <h2 className="text-sm uppercase tracking-widest text-blue-400">
-              Projects
-            </h2>
-
-            <div className="mt-4 space-y-4">
-
+          {/* SOCIALS */}
+          <div className="flex flex-col gap-3">
+            <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">
+              Find Me On
+            </span>
+            <div className="flex justify-center lg:justify-start gap-4">
               <a
-                href="#"
+                href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block border border-gray-800 rounded-xl p-4 hover:border-blue-500 transition hover:bg-gray-900/40"
+                className="p-3 bg-neutral-900 rounded-xl border border-neutral-800 hover:text-red-600 transition-all"
               >
-                <h3 className="text-white text-sm font-medium">
-                  Real Estate Landing Page
-                </h3>
-
-                <p className="text-gray-400 text-sm mt-1">
-                  Responsive UI built with HTML, CSS, and JavaScript.
-                </p>
+                <FaLinkedin size={22} />
               </a>
-
               <a
-                href="#"
+                href="https://github.com/Alarki"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block border border-gray-800 rounded-xl p-4 hover:border-blue-500 transition hover:bg-gray-900/40"
+                className="p-3 bg-neutral-900 rounded-xl border border-neutral-800 hover:text-red-600 transition-all"
               >
-                <h3 className="text-white text-sm font-medium">
-                  Kids Learning App
-                </h3>
-
-                <p className="text-gray-400 text-sm mt-1">
-                  React Native application focused on UI and learning experience.
-                </p>
+                <FaGithub size={22} />
               </a>
-
             </div>
-          </section>
+          </div>
 
-          {/* SKILLS */}
-          <section className="mt-10">
-            <h2 className="text-sm uppercase tracking-widest text-blue-400">
-              Skills
-            </h2>
-
-            <p className="mt-3 text-gray-300 text-sm leading-relaxed">
-              Java · Python · JavaScript · C# · C++ · HTML · CSS · SQL · Linux · Git
-            </p>
-          </section>
-
-          {/* GITHUB */}
-          <section className="mt-10">
-            <h2 className="text-sm uppercase tracking-widest text-blue-400">
-              GitHub
-            </h2>
-
-            <a
-              href="https://github.com/Alarki"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-3 text-sm text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition shadow-md"
+          {/* BUTTONS */}
+          <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
+            <Link
+              href="/contact"
+              className="bg-red-600 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-red-700 transition-all shadow-xl shadow-red-600/10"
             >
-              View My GitHub
-            </a>
-          </section>
-
-          {/* CV */}
-          <section className="mt-10">
-            <h2 className="text-sm uppercase tracking-widest text-blue-400">
-              CV
-            </h2>
-
+              Hire Me
+            </Link>
             <a
-              href="/cv.pdf"
+              href="/resume.pdf"
               download
-              className="inline-block mt-3 text-sm text-white bg-green-600 px-4 py-2 rounded-lg hover:bg-green-700 transition shadow-md"
+              className="bg-neutral-900 border border-neutral-800 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-neutral-800 transition-all"
             >
-              Download CV
+              Resume
             </a>
-          </section>
-
-          {/* HIRE ME */}
-          <section className="mt-10 text-center">
-
-            <h2 className="text-sm uppercase tracking-widest text-blue-400">
-              Availability
-            </h2>
-
-            <p className="mt-3 text-gray-300 text-sm">
-              Open to Software Development, IT Support, and Graduate Programme opportunities.
-            </p>
-
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=ndemugwedhaalarki@gmail.com&su=Job%20Opportunity%20-%20Software%20Developer"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-5 bg-blue-600 hover:bg-blue-700 text-white text-sm px-6 py-2 rounded-lg transition shadow-md"
-            >
-              Contact / Hire Me
-            </a>
-
-          </section>
-
-          {/* CONTACT */}
-          <section className="mt-10">
-            <h2 className="text-sm uppercase tracking-widest text-blue-400">
-              Contact
-            </h2>
-
-            <p className="text-sm text-gray-300 mt-2">
-              Email:
-              <a
-                href="mailto:ndemugwedhaalarki@gmail.com"
-                className="text-white hover:text-blue-400 ml-1"
-              >
-                ndemugwedhaalarki@gmail.com
-              </a>
-            </p>
-
-            <p className="text-sm text-gray-300 mt-2">
-              Phone:
-              <span className="text-white ml-1">
-                +264812324970
-              </span>
-            </p>
-          </section>
-
+          </div>
         </div>
-      </div>
+
+        {/* RIGHT SIDE IMAGE */}
+        <div className="relative flex justify-center lg:justify-end">
+          <div className="w-[280px] h-[380px] md:w-[350px] md:h-[480px] rounded-[60px] overflow-hidden border-4 border-[#070707] shadow-2xl relative z-10 bg-neutral-900">
+            <img
+              src="/me.jpg"
+              alt="Alarki Profile"
+              className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="relative z-10 flex flex-col sm:flex-row justify-between items-center border-t border-neutral-900 pt-4 mt-6 text-xs text-gray-500 w-full max-w-7xl mx-auto gap-4">
+        <p>© {new Date().getFullYear()} Alarki Ndemugwedha</p>
+        <div className="flex items-center gap-2 bg-neutral-900/50 px-4 py-2 rounded-full border border-neutral-800">
+          <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+          <span>Available for Opportunities</span>
+        </div>
+      </footer>
+
     </main>
   );
 }
