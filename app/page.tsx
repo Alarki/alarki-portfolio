@@ -150,7 +150,7 @@ export default function Home() {
             <img
               src="/me.jpg"
               alt="Alarki Profile"
-              className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
+              className="w-full h-full object-cover object-center hover:scale-105 transition-all duration-700"
             />
           </div>
         </div>
